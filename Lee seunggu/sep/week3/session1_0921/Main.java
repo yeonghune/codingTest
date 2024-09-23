@@ -1,3 +1,5 @@
+package sep.week3.session1_0921;
+
 import java.util.Scanner;
 
 public class Main

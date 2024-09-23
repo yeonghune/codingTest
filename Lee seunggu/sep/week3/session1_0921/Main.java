@@ -16,7 +16,7 @@ public class Main
             }
             else
             {
-                System.out.printf("%c",str.charAt(i)-32);
+                System.out.printf("%c", str.charAt(i)-32);
             }
         }
     }

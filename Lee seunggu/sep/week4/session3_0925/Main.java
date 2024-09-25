@@ -32,7 +32,8 @@ public class Main
         int requiredMinute = (requiredSecondAmount % 3600) / 60;
         int requiredSecond = requiredSecondAmount % 60;
 
-        System.out.print(String.format("%02d:%02d:%02d", requiredHour, requiredMinute, requiredSecond));
+        System.out.println(String.format("%02d:%02d:%02d", requiredHour, requiredMinute, requiredSecond));
+        //System.out.printf("%02d:%02d:%02d", requiredHour, requiredMinute, requiredSecond);
     }
 }
 

@@ -24,36 +24,46 @@ public class Main
         st = new StringTokenizer(br.readLine());
         int t = Integer.parseInt(st.nextToken());
 
-        // t = t % getLCM(w,h); -> 시간초과
+        int currentX = (p+t)%(2*w);
+        int currentY = (q+t)%(2*h);
 
-        // X,Y 좌표 나눠서 각각 계산
-        int timeX = t % (2*w);
-        int timeY = t % (2*h);
-        int currentX = p;
-        int currentY = q;
-        int deltaX = 1;
-        int deltaY = 1;
+        if(currentX>w)
+            currentX=w-(currentX-w);
 
-        while(timeX-->0)
-        {
-            if(currentX==w)
-                deltaX = -1;
-            else if(currentX==0)
-                deltaX = 1;
+        if(currentY>h)
+            currentY=h-(currentY-h);
 
-            currentX += deltaX;
-        }
-
-        while(timeY-- > 0)
-        {
-            if(currentY==h)
-                deltaY = -1;
-            else if(currentY==0)
-                deltaY = 1;
-
-            currentY += deltaY;
-        }
-
+        /* 빅오 max(w,h) */
+//        // t = t % getLCM(w,h); -> 시간초과
+//
+//        // X,Y 좌표 나눠서 각각 계산
+//        int timeX = t % (2*w);
+//        int timeY = t % (2*h);
+//        int currentX = p;
+//        int currentY = q;
+//        int deltaX = 1;
+//        int deltaY = 1;
+//
+//        while(timeX-->0)
+//        {
+//            if(currentX==w)
+//                deltaX = -1;
+//            else if(currentX==0)
+//                deltaX = 1;
+//
+//            currentX += deltaX;
+//        }
+//
+//        while(timeY-- > 0)
+//        {
+//            if(currentY==h)
+//                deltaY = -1;
+//            else if(currentY==0)
+//                deltaY = 1;
+//
+//            currentY += deltaY;
+//        }
+//
         br.close();
         bw.write(currentX+" "+currentY);
         bw.flush();

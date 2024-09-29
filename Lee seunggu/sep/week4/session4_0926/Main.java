@@ -64,6 +64,7 @@ public class Main
 //            currentY += deltaY;
 //        }
 //
+
         br.close();
         bw.write(currentX+" "+currentY);
         bw.flush();
